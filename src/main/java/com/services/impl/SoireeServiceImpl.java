@@ -65,7 +65,8 @@ public class SoireeServiceImpl implements SoireeService {
     private SoireeDto soireeEntityToDto(Soiree soiree){
         SoireeDto soireeDto = new SoireeDto();
         soireeDto.setId(soiree.getId());
-        soireeDto.setPrix(soireeDto.getPrix());
+        soireeDto.setNom(soiree.getNom());
+        soireeDto.setPrix(soiree.getPrix());
         soireeDto.setSalle_id(soiree.getSalle().getId());
         return soireeDto;
     }
@@ -76,11 +77,12 @@ public class SoireeServiceImpl implements SoireeService {
     private Soiree soireeDtoToEntity(SoireeDto soireeDto){
         Soiree soiree = new Soiree();
         soiree.setId(soireeDto.getId());
+        soiree.setNom(soireeDto.getNom());
         // récupération de l'entité Salle correspondante à partir de l'ID de la salle dans le DTO
         Salle salle = salleRepository.findById(soireeDto.getSalle_id())
-                .orElseThrow(() -> new EntityNotFoundException("Salle not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Soiree not found"));
         soiree.setSalle(salle);
-        soiree.setPrix(soiree.getPrix());
+        soiree.setPrix(soireeDto.getPrix());
         return soiree;
     }
 

@@ -2,7 +2,9 @@ package com.services.impl;
 
 import com.dtos.ArtisteDto;
 import com.entities.Artiste;
+import com.entities.Groupe;
 import com.repositories.ArtisteRepository;
+import com.repositories.GroupeRepository;
 import com.services.ArtisteService;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +15,11 @@ import java.util.List;
 public class ArtisteServiceImpl implements ArtisteService {
     private final ArtisteRepository artisteRepository;
 
-    public ArtisteServiceImpl(ArtisteRepository artisteRepository){
+    private  final GroupeRepository groupeRepository;
+
+    public ArtisteServiceImpl(ArtisteRepository artisteRepository, GroupeRepository groupeRepository){
         this.artisteRepository = artisteRepository;
+        this.groupeRepository = groupeRepository;
     }
 
     @Override
@@ -77,7 +82,13 @@ public class ArtisteServiceImpl implements ArtisteService {
         artiste.setPseudo(artisteDto.getPseudo());
         artiste.setVille_origine(artisteDto.getVille_origine());
         artiste.setDate_naissance(artisteDto.getDate_naissance());
-        artisteDto.setGroupe_id(artiste.getGroupe() != null ? artiste.getGroupe().getId() : null);
+
+        if(artisteDto.getGroupe_id() > 0){
+            Groupe groupe = groupeRepository.findById(artisteDto.getGroupe_id())
+                    .orElseThrow(() -> new EntityNotFoundException("Groupe not found"));
+            artiste.setGroupe(groupe);
+        }
+
         return artiste;
     }
 

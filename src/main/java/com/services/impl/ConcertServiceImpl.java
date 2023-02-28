@@ -2,6 +2,7 @@ package com.services.impl;
 
 import com.dtos.ConcertDto;
 import com.entities.Concert;
+import com.entities.Groupe;
 import com.entities.Salle;
 import com.repositories.ConcertRepository;
 import com.services.ConcertService;
@@ -62,8 +63,8 @@ public class ConcertServiceImpl implements ConcertService {
         concertDto.setSalle_id(concert.getSalle().getId());
         concertDto.setGroupe_id(concert.getGroupe().getId());
         concertDto.setDate_heure(concert.getDate_heure());
-        concertDto.setDuree(concertDto.getDuree());
-        concertDto.setPrix(concertDto.getPrix());
+        concertDto.setDuree(concert.getDuree());
+        concertDto.setPrix(concert.getPrix());
         return concertDto;
     }
 
@@ -72,6 +73,14 @@ public class ConcertServiceImpl implements ConcertService {
      */
     private Concert concertDtoToEntity(ConcertDto concertDto){
         Concert concert = new Concert();
+        if(concert.getSalle() == null){
+            Salle salle = new Salle();
+            concert.setSalle(salle);
+        }
+        if(concert.getGroupe() == null){
+            Groupe groupe = new Groupe();
+            concert.setGroupe(groupe);
+        }
         concert.getSalle().setId(concertDto.getSalle_id());
         concert.setId(concertDto.getId());
         concert.getGroupe().setId(concertDto.getGroupe_id());
