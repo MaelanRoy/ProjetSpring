@@ -79,7 +79,7 @@ public class GroupeServiceImpl implements GroupeService {
     private Groupe groupeDtoToEntity(GroupeDto groupeDto){
         Groupe groupe = new Groupe();
         groupe.setId(groupeDto.getId());
-        groupe.setNom(groupe.getNom());
+        groupe.setNom(groupeDto.getNom());
         return groupe;
     }
 }

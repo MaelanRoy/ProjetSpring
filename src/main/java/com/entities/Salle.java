@@ -18,6 +18,8 @@ public class Salle {
     private String nom;
     private String adresse;
     private int capacite;
+
+    @JoinColumn(name = "gestionnaire_id")
     private int gestionnaire_id;
 
     @OneToMany(mappedBy = "salle")

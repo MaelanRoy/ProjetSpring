@@ -1,8 +1,5 @@
 package com.demo;
 
-import com.controllers.DogController;
-import com.dtos.DogDto;
-import com.services.impl.DogServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
