@@ -18,8 +18,8 @@ public class SalleController {
     }
 
     /**
-     * <p>Get all dogs in the system</p>
-     * @return List<DogDto>
+     * <p>Get all salles in the system</p>
+     * @return List<salleDto>
      */
     @GetMapping
     public List<SalleDto> getSalle() {
@@ -27,7 +27,7 @@ public class SalleController {
     }
 
     /**
-     * Method to get the dog based on the ID
+     * Method to get the salle based on the ID
      */
     @GetMapping("/{id}")
     public SalleDto getSalle(@PathVariable int id){
@@ -35,7 +35,7 @@ public class SalleController {
     }
 
     /**
-     * Create a new Dog in the system
+     * Create a new salle in the system
      */
     @PostMapping
     public SalleDto saveSalle(final @RequestBody SalleDto salleDto){
@@ -43,7 +43,7 @@ public class SalleController {
     }
 
     /**
-     * Delete a dog by it's id
+     * Delete a salle by it's id
      */
     @DeleteMapping("/{id}")
     public Boolean deleteSalle(@PathVariable int id){

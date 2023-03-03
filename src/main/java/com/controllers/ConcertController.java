@@ -17,8 +17,8 @@ public class ConcertController {
     }
 
     /**
-     * <p>Get all dogs in the system</p>
-     * @return List<DogDto>
+     * <p>Get all concerts in the system</p>
+     * @return List<concertDto>
      */
     @GetMapping
     public List<ConcertDto> getConcert() {
@@ -27,7 +27,7 @@ public class ConcertController {
 
 
     /**
-     * Method to get the dog based on the ID
+     * Method to get the concert based on the ID
      */
     @GetMapping("/{id}")
     public ConcertDto getConcert(@PathVariable int id){
@@ -35,7 +35,7 @@ public class ConcertController {
     }
 
     /**
-     * Create a new Dog in the system
+     * Create a new concert in the system
      */
     @PostMapping
     public ConcertDto saveConcert(final @RequestBody ConcertDto concertDto){
@@ -43,7 +43,7 @@ public class ConcertController {
     }
 
     /**
-     * Delete a dog by it's id
+     * Delete a concert by it's id
      */
     @DeleteMapping("/{id}")
     public Boolean deleteConcert(@PathVariable int id){

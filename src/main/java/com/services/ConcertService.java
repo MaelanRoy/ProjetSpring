@@ -6,22 +6,22 @@ import java.util.List;
 
 public interface ConcertService {
     /**
-     * Sauve a dog
+     * Sauve a concert
      */
     ConcertDto saveConcert(ConcertDto concertDto);
 
     /**
-     * Get a dog by it's id
+     * Get a concert by it's id
      */
     ConcertDto getConcertById(int concertId);
 
     /**
-     * Delete a dog by it's id
+     * Delete a concert by it's id
      */
     boolean deleteConcert(int concertId);
 
     /**
-     * Get all the dogs
+     * Get all the concerts
      */
     List<ConcertDto> getAllConcert();
 

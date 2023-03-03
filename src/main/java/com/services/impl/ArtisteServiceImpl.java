@@ -24,9 +24,9 @@ public class ArtisteServiceImpl implements ArtisteService {
 
     @Override
     public ArtisteDto saveArtiste(ArtisteDto artisteDto) {
-        // Converts the dto to the dog entity
+        // Converts the dto to the artiste entity
         Artiste artiste = artisteDtoToEntity(artisteDto);
-        // Save the dog entity
+        // Save the artiste entity
         artiste = artisteRepository.save(artiste);
         // Return the new dto
         return artisteEntityToDto(artiste);
@@ -55,7 +55,7 @@ public class ArtisteServiceImpl implements ArtisteService {
     }
 
     /**
-     * Map dog dto to dog entity
+     * Map artiste dto to artiste entity
      */
     private ArtisteDto artisteEntityToDto(Artiste artiste){
         ArtisteDto artisteDto = new ArtisteDto();
@@ -72,7 +72,7 @@ public class ArtisteServiceImpl implements ArtisteService {
     }
 
     /**
-     * Map dog entity to dog dto
+     * Map Artiste entity to artiste dto
      */
     private Artiste artisteDtoToEntity(ArtisteDto artisteDto){
         Artiste artiste = new Artiste();

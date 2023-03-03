@@ -18,8 +18,8 @@ public class ArtisteController {
     }
 
     /**
-     * <p>Get all dogs in the system</p>
-     * @return List<DogDto>
+     * <p>Get all artistes in the system</p>
+     * @return List<artisteDto>
      */
     @GetMapping
     public List<ArtisteDto> getArtiste() {
@@ -28,7 +28,7 @@ public class ArtisteController {
 
 
     /**
-     * Method to get the dog based on the ID
+     * Method to get the artiste based on the ID
      */
     @GetMapping("/{id}")
     public ArtisteDto getArtiste(@PathVariable int id){
@@ -36,7 +36,7 @@ public class ArtisteController {
     }
 
     /**
-     * Create a new Dog in the system
+     * Create a new artiste in the system
      */
     @PostMapping
     public ArtisteDto saveArtiste(final @RequestBody ArtisteDto artisteDto){
@@ -44,7 +44,7 @@ public class ArtisteController {
     }
 
     /**
-     * Delete a dog by it's id
+     * Delete a artiste by it's id
      */
     @DeleteMapping("/{id}")
     public Boolean deleteArtiste(@PathVariable int id){

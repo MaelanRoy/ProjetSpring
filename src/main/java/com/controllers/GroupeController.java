@@ -17,8 +17,8 @@ public class GroupeController {
     }
 
     /**
-     * <p>Get all dogs in the system</p>
-     * @return List<DogDto>
+     * <p>Get all groupes in the system</p>
+     * @return List<groupeDto>
      */
     @GetMapping
     public List<GroupeDto> getGroupe() {
@@ -26,7 +26,7 @@ public class GroupeController {
     }
 
     /**
-     * Method to get the dog based on the ID
+     * Method to get the groupe based on the ID
      */
     @GetMapping("/{id}")
     public GroupeDto getGroupe(@PathVariable int id){
@@ -34,7 +34,7 @@ public class GroupeController {
     }
 
     /**
-     * Create a new Dog in the system
+     * Create a new groupe in the system
      */
     @PostMapping
     public GroupeDto saveGroupe(final @RequestBody GroupeDto groupeDto){
@@ -42,7 +42,7 @@ public class GroupeController {
     }
 
     /**
-     * Delete a dog by it's id
+     * Delete a groupe by it's id
      */
     @DeleteMapping("/{id}")
     public Boolean deleteGroupe(@PathVariable int id){

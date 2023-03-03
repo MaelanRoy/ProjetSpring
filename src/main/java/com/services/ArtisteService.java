@@ -6,22 +6,22 @@ import java.util.List;
 
 public interface ArtisteService {
     /**
-     * Sauve a dog
+     * Sauve a artiste
      */
     ArtisteDto saveArtiste(ArtisteDto artisteDto);
 
     /**
-     * Get a dog by it's id
+     * Get a artiste by it's id
      */
     ArtisteDto getArtisteById(int artisteId);
 
     /**
-     * Delete a dog by it's id
+     * Delete a artiste by it's id
      */
     boolean deleteArtiste(int artisteId);
 
     /**
-     * Get all the dogs
+     * Get all the artistes
      */
     List<ArtisteDto> getAllArtiste();
 

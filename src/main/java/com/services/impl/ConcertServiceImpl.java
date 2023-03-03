@@ -24,9 +24,9 @@ public class ConcertServiceImpl implements ConcertService {
 
     @Override
     public ConcertDto saveConcert(ConcertDto concertDto) {
-        // Converts the dto to the dog entity
+        // Converts the dto to the concert entity
         Concert concert = concertDtoToEntity(concertDto);
-        // Save the dog entity
+        // Save the concert entity
         concert = concertRepository.save(concert);
         // Return the new dto
         return concertEntityToDto(concert);
@@ -55,7 +55,7 @@ public class ConcertServiceImpl implements ConcertService {
     }
 
     /**
-     * Map dog dto to dog entity
+     * Map concert dto to concert entity
      */
     private ConcertDto concertEntityToDto(Concert concert){
         ConcertDto concertDto = new ConcertDto();
@@ -69,7 +69,7 @@ public class ConcertServiceImpl implements ConcertService {
     }
 
     /**
-     * Map dog entity to dog dto
+     * Map concert entity to concert dto
      */
     private Concert concertDtoToEntity(ConcertDto concertDto){
         Concert concert = new Concert();

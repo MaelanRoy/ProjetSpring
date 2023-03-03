@@ -17,8 +17,8 @@ public class SoireeController {
     }
 
     /**
-     * <p>Get all dogs in the system</p>
-     * @return List<DogDto>
+     * <p>Get all soirees in the system</p>
+     * @return List<soireeDto>
      */
     @GetMapping
     public List<SoireeDto> getSoire() {return soireeService.getAllSoiree();
@@ -26,7 +26,7 @@ public class SoireeController {
 
 
     /**
-     * Method to get the dog based on the ID
+     * Method to get the soiree based on the ID
      */
     @GetMapping("/{id}")
     public SoireeDto getSoiree(@PathVariable int id){
@@ -34,7 +34,7 @@ public class SoireeController {
     }
 
     /**
-     * Create a new Dog in the system
+     * Create a new soiree in the system
      */
     @PostMapping
     public SoireeDto saveSoiree(final @RequestBody SoireeDto soireeDto){
@@ -42,7 +42,7 @@ public class SoireeController {
     }
 
     /**
-     * Delete a dog by it's id
+     * Delete a soiree by it's id
      */
     @DeleteMapping("/{id}")
     public Boolean deleteSoiree(@PathVariable int id){

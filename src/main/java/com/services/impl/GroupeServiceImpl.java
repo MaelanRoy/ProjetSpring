@@ -28,9 +28,9 @@ public class GroupeServiceImpl implements GroupeService {
 
     @Override
     public GroupeDto saveGroupe(GroupeDto groupeDto) {
-        // Converts the dto to the dog entity
+        // Converts the dto to the groupe entity
         Groupe groupe = groupeDtoToEntity(groupeDto);
-        // Save the dog entity
+        // Save the groupe entity
         groupe = groupeRepository.save(groupe);
         // Return the new dto
         return groupeEntityToDto(groupe);
@@ -60,7 +60,7 @@ public class GroupeServiceImpl implements GroupeService {
     }
 
     /**
-     * Map dog dto to dog entity
+     * Map groupe dto to groupe entity
      */
     private GroupeDto groupeEntityToDto(Groupe groupe){
         GroupeDto groupeDto = new GroupeDto();
@@ -74,7 +74,7 @@ public class GroupeServiceImpl implements GroupeService {
     }
 
     /**
-     * Map dog entity to dog dto
+     * Map groupe entity to groupe dto
      */
     private Groupe groupeDtoToEntity(GroupeDto groupeDto){
         Groupe groupe = new Groupe();

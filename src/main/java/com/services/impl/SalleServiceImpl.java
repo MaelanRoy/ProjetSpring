@@ -29,9 +29,9 @@ public class SalleServiceImpl implements SalleService {
 
     @Override
     public SalleDto saveSalle(SalleDto salleDto) {
-        // Converts the dto to the dog entity
+        // Converts the dto to the salle entity
         Salle salle = salleDtoToEntity(salleDto);
-        // Save the dog entity
+        // Save the salle entity
         salle = salleRepository.save(salle);
         // Return the new dto
         return salleEntityToDto(salle);
@@ -61,7 +61,7 @@ public class SalleServiceImpl implements SalleService {
     }
 
     /**
-     * Map dog dto to dog entity
+     * Map salle dto to salle entity
      */
     private SalleDto salleEntityToDto(Salle salle){
         SalleDto salleDto = new SalleDto();
@@ -78,7 +78,7 @@ public class SalleServiceImpl implements SalleService {
     }
 
     /**
-     * Map dog entity to dog dto
+     * Map salle entity to salle dto
      */
     private Salle salleDtoToEntity(SalleDto salleDto){
         Salle salle = new Salle();

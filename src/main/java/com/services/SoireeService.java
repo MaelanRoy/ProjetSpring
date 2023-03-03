@@ -8,22 +8,22 @@ import java.util.List;
 
 public interface SoireeService {
     /**
-     * Sauve a dog
+     * Sauve a soiree
      */
     SoireeDto saveSoiree(SoireeDto soireeDto);
 
     /**
-     * Get a dog by it's id
+     * Get a soiree by it's id
      */
     SoireeDto getSoireeById(int soireeId);
 
     /**
-     * Delete a dog by it's id
+     * Delete a soiree by it's id
      */
     boolean deleteSoiree(int soireeId);
 
     /**
-     * Get all the dogs
+     * Get all the soirees
      */
     List<SoireeDto> getAllSoiree();
 

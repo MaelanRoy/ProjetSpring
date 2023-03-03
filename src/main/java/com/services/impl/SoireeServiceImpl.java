@@ -28,9 +28,9 @@ public class SoireeServiceImpl implements SoireeService {
 
     @Override
     public SoireeDto saveSoiree(SoireeDto soireeDto) {
-        // Converts the dto to the dog entity
+        // Converts the dto to the salle entity
         Soiree soiree = soireeDtoToEntity(soireeDto);
-        // Save the dog entity
+        // Save the salle entity
         soiree = soireeRepository.save(soiree);
         // Return the new dto
         return soireeEntityToDto(soiree);
@@ -60,7 +60,7 @@ public class SoireeServiceImpl implements SoireeService {
 
 
     /**
-     * Map dog dto to dog entity
+     * Map salle dto to salle entity
      */
     private SoireeDto soireeEntityToDto(Soiree soiree){
         SoireeDto soireeDto = new SoireeDto();
@@ -72,7 +72,7 @@ public class SoireeServiceImpl implements SoireeService {
     }
 
     /**
-     * Map dog entity to dog dto
+     * Map salle entity to salle dto
      */
     private Soiree soireeDtoToEntity(SoireeDto soireeDto){
         Soiree soiree = new Soiree();

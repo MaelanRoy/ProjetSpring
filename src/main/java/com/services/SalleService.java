@@ -7,22 +7,22 @@ import java.util.List;
 
 public interface SalleService {
     /**
-     * Sauve a dog
+     * Sauve a salle
      */
     SalleDto saveSalle(SalleDto salleDto);
 
     /**
-     * Get a dog by it's id
+     * Get a salle by it's id
      */
     SalleDto getSalleById(int salleId);
 
     /**
-     * Delete a dog by it's id
+     * Delete a salle by it's id
      */
     boolean deleteSalle(int salleId);
 
     /**
-     * Get all the dogs
+     * Get all the salles
      */
     List<SalleDto> getAllSalle();
 }
