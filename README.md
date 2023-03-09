@@ -1,8 +1,8 @@
-API Gestion de Concerts
+API GESTION DE CONCERTS
 
 Ce projet consiste à créer une API permettant d'aider les organisateurs de concerts à gérer facilement les informations liées aux concerts, aux salles et aux groupes. L'API créée permettra des fonctionnalités pratiques telles que la création de nouveaux concerts, la visualisation de tous les concerts existants ou encore la recherche d'un concert en particulier à l'aide de son ID unique.
 
-Fonctionnalités
+FONCTIONNALITES
 
 L'API Gestion de Concerts permettra les fonctionnalités suivantes:
 
@@ -27,7 +27,7 @@ L'API Gestion de Concerts permettra les fonctionnalités suivantes:
 -Recherche d'une soirée en particulière à l'aide de son ID unique.
 
 
-Membres du projet
+MEMBRES DU PROJET
 
 Les membres du projet sont:
 
